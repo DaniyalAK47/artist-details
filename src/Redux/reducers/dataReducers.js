@@ -1,13 +1,15 @@
+import { GET_DATA } from "../actions/dataActionTypes";
+
 const initState = {
   artistDetail: {},
 };
 
 function reducer(state = initState, action) {
   switch (action.type) {
-    case "SET_ARTIST_DETAIL":
+    case GET_DATA:
       return {
         ...state,
-        artistDetail: action.payload,
+        [action.payload.name]: action.payload.response,
       };
     default:
       return state;
