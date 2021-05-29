@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
 import LandingLogo from "../../Assets/landing.png";
 
-export default function Landing() {
+export default function Landing({ searchLink }) {
   return (
     <div style={{ margin: 10 }}>
       <Grid container alignItems="center">
@@ -16,7 +16,15 @@ export default function Landing() {
           <Button
             variant="contained"
             color="primary"
-            style={{ margin: 20, height: 60, backgroundColor: "#FFD700" }}
+            onClick={() => searchLink()}
+            style={{
+              margin: 20,
+              height: 70,
+              width: "30%",
+              backgroundColor: "#FFD700",
+              color: "black",
+              fontSize: 20,
+            }}
           >
             Search Now
           </Button>
