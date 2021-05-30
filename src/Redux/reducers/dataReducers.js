@@ -3,6 +3,8 @@ import {
   API_LOADING,
   INIT,
   INIT_EVENT,
+  RESET_ARTIST,
+  RESET_EVENT,
 } from "../actions/dataActionTypes";
 
 const initState = {
@@ -34,6 +36,16 @@ function reducer(state = initState, action) {
       return {
         ...state,
         initEvent: action.payload.response,
+      };
+    case RESET_ARTIST:
+      return {
+        ...state,
+        getartists: "",
+      };
+    case RESET_EVENT:
+      return {
+        ...state,
+        getartistsevents: "",
       };
     default:
       return state;

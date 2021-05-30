@@ -14,17 +14,20 @@ export default function SearchBar({
   return (
     <>
       <TextField
+        placeholder="Search"
         innerRef={search}
         style={{
           backgroundColor: "white",
           margin: 5,
           width: "50%",
         }}
+        data-testid="searchBar"
         value={value}
         onChange={(val) => setValue(val.target.value)}
       />
       <Button
         disabled={value === "" ? true : false}
+        data-testid="search-button"
         style={{
           margin: 5,
           backgroundColor: "#FFD700",

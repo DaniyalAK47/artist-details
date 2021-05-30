@@ -1,5 +1,11 @@
 import axios from "axios";
-import { GET_DATA, API_LOADING, INIT } from "./dataActionTypes";
+import {
+  GET_DATA,
+  API_LOADING,
+  INIT,
+  RESET_EVENT,
+  INIT_EVENT,
+} from "./dataActionTypes";
 
 export const URL = "https://rest.bandsintown.com/artists";
 
@@ -23,26 +29,39 @@ export const init = (status) => (dispatch) => {
 
 export const initEvent = (status) => (dispatch) => {
   dispatch({
-    type: INIT,
+    type: INIT_EVENT,
     payload: {
       response: status,
     },
   });
 };
 
+export const resetEvent = () => (dispatch) => {
+  dispatch({
+    type: RESET_EVENT,
+  });
+};
+
 export const getData = (params, link, query) => (dispatch) => {
   dispatch(isLoading(true));
+  dispatch(resetEvent());
+
   var request = {};
   if (link) {
     request = {
       method: "GET",
       url: `${URL}/${params}/${link}?app_id=123123&date=${query}`,
     };
+    // dispatch(resetEvent());
   } else {
     request = {
       method: "GET",
       url: `${URL}/${params}?app_id=123123`,
     };
+    dispatch(initEvent(true));
+
+    // dispatch(resetArtist());
+    // dispatch(resetEvent());
   }
 
   return axios(request)
@@ -75,6 +94,13 @@ export const getData = (params, link, query) => (dispatch) => {
       if (err) {
         console.log(err);
       }
+      dispatch({
+        type: GET_DATA,
+        payload: {
+          name: "getartists" + link,
+          response: "",
+        },
+      });
       dispatch(isLoading(false));
       dispatch(init(false));
     });

@@ -19,6 +19,7 @@ export default function ArtistDetail({ artistEventLink }) {
         <>
           <Grid
             container
+            className="main-grid"
             style={{ backgroundColor: "#00008B", height: "60%" }}
             alignItems="center"
           >
@@ -34,6 +35,7 @@ export default function ArtistDetail({ artistEventLink }) {
             </Grid>
             <Grid item xs={12} sm={12} md={5} lg={5}>
               <Typography
+                className="name"
                 variant="h1"
                 style={{ color: "white", textAlign: "center", margin: 10 }}
               >
@@ -41,6 +43,7 @@ export default function ArtistDetail({ artistEventLink }) {
               </Typography>
 
               <div
+                className="details"
                 style={{
                   display: "flex",
                   flexDirection: "row",
@@ -49,6 +52,7 @@ export default function ArtistDetail({ artistEventLink }) {
                 }}
               >
                 <FacebookIcon
+                  className="icon"
                   style={{
                     color: "white",
                     // backgroundColor: "red",
@@ -58,6 +62,7 @@ export default function ArtistDetail({ artistEventLink }) {
                 />
 
                 <Typography
+                  className="link"
                   variant="h6"
                   style={{
                     color: "white",
@@ -70,6 +75,7 @@ export default function ArtistDetail({ artistEventLink }) {
               </div>
 
               <div
+                className="dates"
                 style={{
                   display: "flex",
                   flexDirection: "row",
@@ -77,15 +83,18 @@ export default function ArtistDetail({ artistEventLink }) {
                   marginLeft: 50,
                 }}
               >
-                <Typography style={{ color: "white", margin: 10, width: 50 }}>
+                <Typography
+                  className="dates-fields"
+                  style={{ color: "white", margin: 10, width: 50 }}
+                >
                   From:{" "}
                 </Typography>
                 <TextField
                   id="date"
+                  className="date-field"
                   value={from}
                   onChange={(val) => setFrom(val.target.value)}
                   type="date"
-                  // onChange={(val)=>}
                   style={{ margin: 7, backgroundColor: "white" }}
                 />
               </div>
@@ -98,10 +107,14 @@ export default function ArtistDetail({ artistEventLink }) {
                   marginLeft: 50,
                 }}
               >
-                <Typography style={{ color: "white", margin: 10, width: 50 }}>
+                <Typography
+                  className="dates-fields"
+                  style={{ color: "white", margin: 10, width: 50 }}
+                >
                   To:{" "}
                 </Typography>
                 <TextField
+                  className="date-field"
                   id="date"
                   value={to}
                   onChange={(val) => setTo(val.target.value)}
@@ -124,6 +137,7 @@ export default function ArtistDetail({ artistEventLink }) {
                     )
                   ).then((res) => artistEventLink());
                 }}
+                className="search-button"
                 style={{
                   backgroundColor: "#FFD700",
                   margin: 10,
