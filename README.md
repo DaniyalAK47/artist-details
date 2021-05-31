@@ -4,6 +4,27 @@ It is a single page web application where user can search for his favourite arti
 
 ## Deployment
 I deployed the application on Netlify which is very easy to use. The deployment is hooked to the Github and is configured to automatically deploy everytime the code is pushed to day01 branch.
+[https://artist-details-daniyal.netlify.app/](https://artist-details-daniyal.netlify.app/)
+
+## Available Scripts
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](#running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance. 
 
 
 ## How it works?
@@ -11,9 +32,11 @@ I deployed the application on Netlify which is very easy to use. The deployment 
 - Search for your favourite artist
 - If the artist searched doesnt exist a message of no artist found is displayed.
 - If the artist searched is found the artist details are present with facebook link and much more.
+- If an artist is searched which was previously searched then a new API call will not be sent and data from cache will be used.
 - Then you can specify the dates and click search event.
 - If no events found during theses dates specifies the a message is displayed of no events found.
-- if events found, then the list of all the events in the are shown with the necessary information and a button which moves you to official bansintown page.
+- If events found, then the list of all the events in the are shown with the necessary information and a button which moves you to official bansintown page.
+
 
 ## Screenshot
 View the web application sccreshots using these links.
@@ -51,24 +74,4 @@ React-Testing-Library is a lightweight solution for testing React components and
 
 ## Architecture
 The major file is public and src folders. The src folder has the main App.js file. However, the src folder is sub divided in __Tests__, Assets, Components, Pages and Redux. This increases reusability, and understandability. __Tests__ contains the test suites for our different components. Asset’s folder contains the images used. The Pages folder is further divided into five subfolders. The subfolders are Header, Landing, ArtistDetail, ArtistEvents and Footer. Each of these subfolders contain the file of code of the corresponding section of the webpage. The component folder contains the different reusable components created. Redux folder contains two further subfolders. The two subfolders are actions and reducers. Actions subfolder contains 2 file dataActions and datActionsTypes where basically the API request are made and specific dispatch functions with the necessary information added are called to reducers. The reduces subfolder contains the file dataReducers which basically initiates the store and performs the necessary changes to the store. 
-
-## Available Scripts
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance. 
 
