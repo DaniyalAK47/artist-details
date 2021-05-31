@@ -17,9 +17,20 @@ I deployed the application on Netlify which is very easy to use. The deployment 
 
 ## Screenshot
 View the web application sccreshots using these links.
+
+ ### Web View
 - [On landing.](https://drive.google.com/file/d/1CDw9AMGfDNVTbBRVM-Xo6S2S4HGg_lEr/view?usp=sharing)
 - [When artist is searched.](https://drive.google.com/file/d/1Je93w6e8fHd5edO_y6gkaqcKrrpwRu2w/view?usp=sharing)
 - [When events are searched within the dates](https://drive.google.com/file/d/1bIMevKI7aD6QilEqcw9voSTr0T0oQ8k2/view?usp=sharing)
+
+### Mobile View
+- [On landing.](https://drive.google.com/file/d/1WjFxx4ng2vc_N1q0N801ot0cEI6GBOt7/view?usp=sharing)
+- [When artist is searched.](https://drive.google.com/file/d/10sqPaj2c5U4NcYzz30MK4SgqfXLAXgfy/view?usp=sharing)
+- [When events are searched within the dates](https://drive.google.com/file/d/1Qhqye284TWmPBoEa6GwDMAfq9Dsp_sJW/view?usp=sharing)
+
+### Dark Mode
+- [On landing](https://drive.google.com/file/d/1n8c321JRzcvUsE_M2QBfgloR0smUISVm/view?usp=sharing)
+
 
 ## Testing
 View the test results screenshots using these links.
