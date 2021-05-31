@@ -17,9 +17,9 @@ I deployed the application on netlify which is very easy to use. The deployment 
 
 ## Screenshot
 View the web application sccreshots using these links.
-[On landing.](https://drive.google.com/file/d/1CDw9AMGfDNVTbBRVM-Xo6S2S4HGg_lEr/view?usp=sharing)
-[When artist is searched.](https://drive.google.com/file/d/1Je93w6e8fHd5edO_y6gkaqcKrrpwRu2w/view?usp=sharing)
-[When events are searched within the dates](https://drive.google.com/file/d/1bIMevKI7aD6QilEqcw9voSTr0T0oQ8k2/view?usp=sharing)
+- [On landing.](https://drive.google.com/file/d/1CDw9AMGfDNVTbBRVM-Xo6S2S4HGg_lEr/view?usp=sharing)
+- [When artist is searched.](https://drive.google.com/file/d/1Je93w6e8fHd5edO_y6gkaqcKrrpwRu2w/view?usp=sharing)
+- [When events are searched within the dates](https://drive.google.com/file/d/1bIMevKI7aD6QilEqcw9voSTr0T0oQ8k2/view?usp=sharing)
 
 ## Testing
 View the test results screenshots using these links.
