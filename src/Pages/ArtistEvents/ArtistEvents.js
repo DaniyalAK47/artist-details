@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useSelector } from "react-redux";
-import ArtistEventsTile from "./ArtistEventsTile";
+import ArtistEventsTile from "../../Components/ArtistEventsTile";
 
 export default function ArtistEvents() {
   const data = useSelector((state) => state);
