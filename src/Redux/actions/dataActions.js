@@ -62,7 +62,6 @@ export const getData = (params, link, query) => (dispatch) => {
 
   return axios(request)
     .then((response) => {
-      console.log(response.data, "GETTTTTTT DATAAAAAAA");
       if (link) {
         dispatch({
           type: GET_DATA,
@@ -87,9 +86,6 @@ export const getData = (params, link, query) => (dispatch) => {
       return response;
     })
     .catch((err) => {
-      if (err) {
-        console.log(err);
-      }
       dispatch({
         type: GET_DATA,
         payload: {

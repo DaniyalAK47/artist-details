@@ -64,21 +64,6 @@ export default function ArtistDetail({ artistEventLink }) {
                   }}
                 />
 
-                {/* {data.getartists.facebook_page_url} */}
-
-                {/* <Typography
-                  className="link"
-                  variant="h6"
-                  style={{
-                    color: "white",
-                    textAlign: "center",
-                    margin: 7,
-                    fontFamily: "Segoe UI",
-                  }}
-                >
-                  Link
-                </Typography> */}
-
                 <Button
                   style={{ color: "white" }}
                   onClick={() => {
@@ -174,7 +159,7 @@ export default function ArtistDetail({ artistEventLink }) {
       ) : data.init ? null : (
         <Grid
           container
-          style={{ backgroundColor: "#00008B", height: 200 }}
+          style={{ backgroundColor: "#10143B", height: 200 }}
           alignItems="center"
           justify="center"
         >

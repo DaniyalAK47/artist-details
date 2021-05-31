@@ -19,20 +19,17 @@ export default function Index() {
     artistEvent.current.scrollIntoView({ behaviour: "smooth" });
 
   return (
-    console.log(search, "CONSOLE LOG"),
-    (
-      <div className="App">
-        <Loading />
-        <Header artistDetailLink={artistDetailLink} search={search} />
-        <Landing setSearch={setSearch} />
-        <div ref={artistDetail}>
-          <ArtistDetail artistEventLink={artistEventLink} />
-        </div>
-        <div ref={artistEvent}>
-          <ArtistEvents />
-        </div>
-        <Footer />
+    <div className="App">
+      <Loading />
+      <Header artistDetailLink={artistDetailLink} search={search} />
+      <Landing setSearch={setSearch} />
+      <div ref={artistDetail}>
+        <ArtistDetail artistEventLink={artistEventLink} />
       </div>
-    )
+      <div ref={artistEvent}>
+        <ArtistEvents />
+      </div>
+      <Footer />
+    </div>
   );
 }
