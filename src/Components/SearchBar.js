@@ -1,6 +1,6 @@
 import React from "react";
 import { TextField, Button } from "@material-ui/core";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/actions/dataActions";
 
 export default function SearchBar({
@@ -10,16 +10,18 @@ export default function SearchBar({
   search,
 }) {
   const dispatch = useDispatch();
+  const data = useSelector((state) => state.getartists);
 
   return (
     <>
       <TextField
         placeholder="Search"
-        innerRef={search}
+        autoFocus={search}
         style={{
           backgroundColor: "white",
           margin: 5,
           width: "50%",
+          padding: 4,
         }}
         data-testid="searchBar"
         value={value}
@@ -30,12 +32,17 @@ export default function SearchBar({
         data-testid="search-button"
         style={{
           margin: 5,
-          backgroundColor: "#FFD700",
-          color: "white",
+          backgroundColor: "#CFA348",
           fontSize: 15,
         }}
         onClick={() => {
-          dispatch(getData(value)).then((res) => artistDetailLink());
+          if (data === "") {
+            dispatch(getData(value)).then((res) => artistDetailLink());
+          } else if (data.name === value) {
+            artistDetailLink();
+          } else {
+            dispatch(getData(value)).then((res) => artistDetailLink());
+          }
         }}
       >
         Search

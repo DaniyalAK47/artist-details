@@ -9,10 +9,10 @@ export default function Header({ artistDetailLink, search }) {
   return (
     <AppBar
       position="relative"
-      style={{ backgroundColor: "#00008B", height: "30%" }}
+      style={{ backgroundColor: "#10143B", height: "30%" }}
     >
       <Grid container alignItems="center" style={{ marginTop: 10 }}>
-        <Grid item xs={6} sm={6} md={6} lg={6}>
+        <Grid item xs={4} sm={5} md={6} lg={6}>
           <img
             className="logo"
             width="60%"
@@ -22,7 +22,7 @@ export default function Header({ artistDetailLink, search }) {
           />
         </Grid>
 
-        <Grid item xs={6} sm={6} md={6} lg={6}>
+        <Grid item xs={8} sm={7} md={6} lg={6}>
           <SearchBar
             value={value}
             setValue={setValue}

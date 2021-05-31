@@ -20,7 +20,7 @@ export default function ArtistDetail({ artistEventLink }) {
           <Grid
             container
             className="main-grid"
-            style={{ backgroundColor: "#00008B", height: "60%" }}
+            style={{ backgroundColor: "#10143B", height: "60%" }}
             alignItems="center"
           >
             <div />
@@ -37,7 +37,12 @@ export default function ArtistDetail({ artistEventLink }) {
               <Typography
                 className="name"
                 variant="h1"
-                style={{ color: "white", textAlign: "center", margin: 10 }}
+                style={{
+                  color: "white",
+                  textAlign: "center",
+                  margin: 10,
+                  fontFamily: "Segoe UI",
+                }}
               >
                 {data.getartists.name}
               </Typography>
@@ -47,7 +52,6 @@ export default function ArtistDetail({ artistEventLink }) {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  // justifyContent: "center",
                   marginLeft: 50,
                 }}
               >
@@ -55,23 +59,34 @@ export default function ArtistDetail({ artistEventLink }) {
                   className="icon"
                   style={{
                     color: "white",
-                    // backgroundColor: "red",
                     margin: 10,
                     width: 50,
                   }}
                 />
 
-                <Typography
+                {/* {data.getartists.facebook_page_url} */}
+
+                {/* <Typography
                   className="link"
                   variant="h6"
                   style={{
                     color: "white",
                     textAlign: "center",
                     margin: 7,
+                    fontFamily: "Segoe UI",
                   }}
                 >
-                  {data.getartists.facebook_page_url}
-                </Typography>
+                  Link
+                </Typography> */}
+
+                <Button
+                  style={{ color: "white" }}
+                  onClick={() => {
+                    window.open(data.getartists.facebook_page_url, "_blank");
+                  }}
+                >
+                  Link
+                </Button>
               </div>
 
               <div
@@ -79,13 +94,17 @@ export default function ArtistDetail({ artistEventLink }) {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  // justifyContent: "center",
                   marginLeft: 50,
                 }}
               >
                 <Typography
                   className="dates-fields"
-                  style={{ color: "white", margin: 10, width: 50 }}
+                  style={{
+                    color: "white",
+                    margin: 10,
+                    width: 50,
+                    fontFamily: "Segoe UI",
+                  }}
                 >
                   From:{" "}
                 </Typography>
@@ -103,7 +122,6 @@ export default function ArtistDetail({ artistEventLink }) {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  // justifyContent: "center",
                   marginLeft: 50,
                 }}
               >
@@ -119,7 +137,11 @@ export default function ArtistDetail({ artistEventLink }) {
                   value={to}
                   onChange={(val) => setTo(val.target.value)}
                   type="date"
-                  style={{ margin: 7, backgroundColor: "white" }}
+                  style={{
+                    margin: 7,
+                    backgroundColor: "white",
+                    fontFamily: "Segoe UI",
+                  }}
                 />
               </div>
 
@@ -139,7 +161,7 @@ export default function ArtistDetail({ artistEventLink }) {
                 }}
                 className="search-button"
                 style={{
-                  backgroundColor: "#FFD700",
+                  backgroundColor: "#CFA348",
                   margin: 10,
                   alignSelf: "flex-start",
                 }}

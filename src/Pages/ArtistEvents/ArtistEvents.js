@@ -12,7 +12,15 @@ export default function ArtistEvents() {
         <div style={{ margin: 40 }}>
           <div style={{ height: 50 }}></div>
 
-          <Typography variant="h3" style={{ textAlign: "left", margin: 20 }}>
+          <Typography
+            variant="h3"
+            style={{
+              textAlign: "left",
+              margin: 20,
+              fontWeight: "bold",
+              fontFamily: "Segoe UI",
+            }}
+          >
             Event Details
           </Typography>
           <div style={{ height: 30 }}></div>
@@ -20,15 +28,14 @@ export default function ArtistEvents() {
           <Grid container justify="center" spacing={5}>
             {data.getartistsevents.map((val) => (
               <Grid item>
-                {/* <div style={{ width: "80%" }}> */}
                 <ArtistEventsTile
                   date={val.datetime}
                   description={val.description}
                   venueName={val.venue.name}
                   city={val.venue.city}
                   country={val.venue.country}
+                  eventLink={val.url}
                 />
-                {/* </div> */}
               </Grid>
             ))}
           </Grid>

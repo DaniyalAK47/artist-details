@@ -55,7 +55,16 @@ export default function ArtistEventsTile({
         <Divider />
       </CardContent>
       <CardActions>
-        <Button variant="contained"> Visit Event Page</Button>
+        <Button
+          style={{ backgroundColor: "#CFA348" }}
+          variant="contained"
+          onClick={() => {
+            window.open(eventLink, "_blank");
+          }}
+        >
+          {" "}
+          Visit Event Page
+        </Button>
       </CardActions>
     </Card>
   );

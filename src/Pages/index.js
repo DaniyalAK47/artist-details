@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import Header from "./Header/Header";
 import Landing from "./Landing/Landing";
@@ -8,7 +8,7 @@ import Loading from "../Components/Loading";
 import Footer from "./Footer/Footer";
 
 export default function Index() {
-  let search = useRef(null);
+  let [search, setSearch] = useState(false);
   const artistDetail = useRef(null);
   const artistEvent = useRef(null);
 
@@ -18,20 +18,21 @@ export default function Index() {
   const artistEventLink = () =>
     artistEvent.current.scrollIntoView({ behaviour: "smooth" });
 
-  const searchLink = () => search.current.focus();
-
   return (
-    <div className="App">
-      <Loading />
-      <Header artistDetailLink={artistDetailLink} search={search} />
-      <Landing searchLink={searchLink} />
-      <div ref={artistDetail}>
-        <ArtistDetail artistEventLink={artistEventLink} />
+    console.log(search, "CONSOLE LOG"),
+    (
+      <div className="App">
+        <Loading />
+        <Header artistDetailLink={artistDetailLink} search={search} />
+        <Landing setSearch={setSearch} />
+        <div ref={artistDetail}>
+          <ArtistDetail artistEventLink={artistEventLink} />
+        </div>
+        <div ref={artistEvent}>
+          <ArtistEvents />
+        </div>
+        <Footer />
       </div>
-      <div ref={artistEvent}>
-        <ArtistEvents />
-      </div>
-      <Footer />
-    </div>
+    )
   );
 }

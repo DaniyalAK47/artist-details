@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -8,13 +8,11 @@ export default function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#00008B",
+        backgroundColor: "#10143B",
         justifyContent: "center",
         width: "100%",
         alignItems: "center",
         padding: 20,
-        // position: "relative",
-        // bottom: 0,
       }}
     >
       <div
@@ -32,7 +30,10 @@ export default function Footer() {
           style={{ color: "white", fontSize: 50, marginRight: 10 }}
         />
       </div>
-      <Typography variant="h6" style={{ color: "white" }}>
+      <Typography
+        variant="h6"
+        style={{ color: "white", fontFamily: "Segoe UI" }}
+      >
         Created By: Daniyal Ahmed Khan
       </Typography>
     </div>

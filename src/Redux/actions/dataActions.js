@@ -52,16 +52,12 @@ export const getData = (params, link, query) => (dispatch) => {
       method: "GET",
       url: `${URL}/${params}/${link}?app_id=123123&date=${query}`,
     };
-    // dispatch(resetEvent());
   } else {
     request = {
       method: "GET",
       url: `${URL}/${params}?app_id=123123`,
     };
     dispatch(initEvent(true));
-
-    // dispatch(resetArtist());
-    // dispatch(resetEvent());
   }
 
   return axios(request)
